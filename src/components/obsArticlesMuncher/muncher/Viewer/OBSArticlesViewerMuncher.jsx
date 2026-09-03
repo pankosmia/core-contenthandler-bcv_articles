@@ -104,9 +104,9 @@ function OBSArticlesViewerMuncher({ metadata, debugRef, obs }) {
                     </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
-                    {ingredient && (
-                      <Markdown className="markdown">{v}</Markdown>
-                    )}
+                    <div className="markdown">
+                      {ingredient && <Markdown>{v}</Markdown>}
+                    </div>
                   </AccordionDetails>
                 </Accordion>
               );
