@@ -2,30 +2,26 @@ import { createRoot } from "react-dom/client";
 import { SpaContainer } from "pankosmia-rcl";
 import { createHashRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
-import NewOBSContent from "./pages/NewOBSContent";
 import App from "./App";
 import { ThemeProvider } from "@emotion/react";
 import { MaterialDesignContent, SnackbarProvider } from "notistack";
 import { createTheme, styled } from "@mui/material";
 import { getAndSetJson } from "pithekos-lib";
 import { useEffect, useState } from "react";
-import AboutRepo from "./pages/AboutRepo";
-
+import { MuncherTest } from "./pages/MuncherTest";
+import OBSContext from "../src/components/obsArticlesMuncher/muncher/context/obsContext";
 const router = createHashRouter([
   {
     path: "/",
     element: <App />,
   },
   {
-    path: "/createDocument/obsContent",
-    element: <NewOBSContent />,
-  },
-  {
-    path: "/aboutRepo",
-    element: <AboutRepo />,
+    path: "/MuncherTest",
+    element: <MuncherTest />,
   },
 ]);
 function AppLayout() {
+  const [obs, setObs] = useState([1, 0]);
   const [themeSpec, setThemeSpec] = useState({
     palette: {
       primary: {
@@ -45,7 +41,7 @@ function AppLayout() {
       themeSpec.palette.primary.main === "#666"
     ) {
       getAndSetJson({
-        url: "/app-resources/themes/default.json",
+        url: "/api/app-resources/themes/default.json",
         setter: setThemeSpec,
       }).then();
     }
@@ -73,20 +69,22 @@ function AppLayout() {
   }));
 
   return (
-    <ThemeProvider theme={theme}>
-      <SnackbarProvider
-        Components={{
-          error: CustomSnackbarContent,
-          info: CustomSnackbarContent,
-          warning: CustomSnackbarContent,
-          success: CustomSnackbarContent,
-        }}
-        maxSnack={6}
-      />
-      <SpaContainer>
-        <RouterProvider router={router} />
-      </SpaContainer>
-    </ThemeProvider>
+    <OBSContext.Provider value={{ obs, setObs }}>
+      <ThemeProvider theme={theme}>
+        <SnackbarProvider
+          Components={{
+            error: CustomSnackbarContent,
+            info: CustomSnackbarContent,
+            warning: CustomSnackbarContent,
+            success: CustomSnackbarContent,
+          }}
+          maxSnack={6}
+        />
+        <SpaContainer>
+          <RouterProvider router={router} />
+        </SpaContainer>
+      </ThemeProvider>
+    </OBSContext.Provider>
   );
 }
 createRoot(document.getElementById("root")).render(<AppLayout />);

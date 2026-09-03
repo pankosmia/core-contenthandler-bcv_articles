@@ -1,5 +1,5 @@
 {
-  "name": "core-contenthandler_obs_articles",
+  "name": "pankosmia-obs_articles-muncher",
   "version": "0.0.1",
   "private": true,
   "homepage": "/clients/core-contenthandler_obs_articles",
@@ -30,7 +30,6 @@
     "react-dom": "^19.2.8"
   },
   "scripts": {
-    "publish": "pnpm run build:package  && cd ./src/components/obsArticlesMuncher && npm publish",
     "build": "vite build",
     "build:package": "vite build --mode isMuncher",
     "dev": "vite",
