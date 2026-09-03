@@ -1,8 +1,8 @@
 {
-  "name": "core-contenthandler_obs_articles",
+  "name": "core-contenthandler_obs_notes",
   "version": "0.0.1",
   "private": true,
-  "homepage": "/clients/core-contenthandler_obs_articles",
+  "homepage": "/clients/core-contenthandler_obs_notes",
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
@@ -32,7 +32,7 @@
     "pankosmia-rcl": "^0.7.1"
   },
   "scripts": {
-    "publish": "pnpm run build:package  && cd ./src/components/obsArticlesMuncher && npm publish",
+    "publish": "pnpm run build:package  && cd ./src/components/obsNotesMuncher && npm publish",
     "build": "vite build",
     "build:package": "vite build --mode isMuncher",
     "dev": "vite",

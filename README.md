@@ -1,3 +1,3 @@
-# core-contenthandler_obs_articles
+# core-contenthandler_obs_notes
 
-core-contenthandler_obs_articles
+core-contenthandler_obs_notes

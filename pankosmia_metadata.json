@@ -1,5 +1,5 @@
 {
-  "id": "core-contenthandler_obs_articles",
+  "id": "core-contenthandler_obs_notes",
   "exclude_from_menu": true,
   "exclude_from_dashboard": true,
   "minServerVersion": "0.12.14",
@@ -12,7 +12,7 @@
       "create_document": [
         {
           "doc": "Create a document for OBS",
-          "label": "pages:core-contenthandler_obs_articles:create_content_obs",
+          "label": "pages:core-contenthandler_obs_notes:create_content_obs",
           "url": "/createDocument/obsContent"
         }
       ],
@@ -28,10 +28,10 @@
 
   "i18n": {
     "title": {
-      "en": "core-contenthandler_obs_articles"
+      "en": "core-contenthandler_obs_notes"
     },
     "summary": {
-      "en": "core-contenthandler_obs_articles"
+      "en": "core-contenthandler_obs_notes"
     },
     "stub_content": {
       "en": "Content goes here"

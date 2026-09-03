@@ -7,10 +7,10 @@ import {
 } from "pankosmia-rcl";
 import { useContext, useState, useEffect } from "react";
 import { getJson } from "pankosmia-lib/http";
-import { WrapperNav } from "../components/obsArticlesMuncher/wrapperMuncher/WrapperNav";
+import { WrapperNav } from "../components/obsNotesMuncher/wrapperMuncher/WrapperNav";
 import { Padding } from "@mui/icons-material";
-import OBSContext from "../components/obsArticlesMuncher/muncher/context/obsContext";
-import OBSArticlesViewerMuncher from "../components/obsArticlesMuncher/muncher/Viewer/OBSArticlesViewerMuncher";
+import OBSContext from "../components/obsNotesMuncher/muncher/context/obsContext";
+import OBSNotesViewerMuncher from "../components/obsNotesMuncher/muncher/Viewer/OBSNotesViewerMuncher";
 
 export function MuncherTest() {
   const { obs, setObs } = useContext(OBSContext);
@@ -57,7 +57,7 @@ export function MuncherTest() {
         height: "98vh",
       }}
     >
-      <WrapperNav flavor={"x-obsarticles"} obs={obs} setObs={setObs} />
+      <WrapperNav flavor={"x-obsnotes"} obs={obs} setObs={setObs} />
 
       <Box
         sx={{
@@ -69,7 +69,7 @@ export function MuncherTest() {
       >
         {metadata && (
           <Box sx={{ flex: 1, margin: 2 }}>
-            <OBSArticlesViewerMuncher
+            <OBSNotesViewerMuncher
               metadata={metadata}
               debugRef={debugRef}
               obs={obs}

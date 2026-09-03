@@ -9,7 +9,7 @@ import { createTheme, styled } from "@mui/material";
 import { getAndSetJson } from "pithekos-lib";
 import { useEffect, useState } from "react";
 import { MuncherTest } from "./pages/MuncherTest";
-import OBSContext from "../src/components/obsArticlesMuncher/muncher/context/obsContext";
+import OBSContext from "../src/components/obsNotesMuncher/muncher/context/obsContext";
 const router = createHashRouter([
   {
     path: "/",

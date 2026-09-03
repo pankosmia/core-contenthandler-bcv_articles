@@ -21,7 +21,7 @@ export default defineConfig(({ mode }) => {
     },
     build: isMuncher
       ? {
-          outDir: "src/components/obsArticlesMuncher/munchersPackageExport",
+          outDir: "src/components/obsNotesMuncher/munchersPackageExport",
           emptyOutDir: true,
           sourcemap: true,
 
@@ -34,7 +34,7 @@ export default defineConfig(({ mode }) => {
               "pankosmia-rcl",
             ],
             output: {
-              name: "obsArticlesMunchersRcl",
+              name: "obsNotesMunchersRcl",
               globals: {
                 react: "React",
                 "react-dom": "ReactDOM",
@@ -48,10 +48,10 @@ export default defineConfig(({ mode }) => {
           lib: {
             entry: path.resolve(
               __dirname,
-              "./src/components/obsArticlesMuncher/muncher/index.js",
+              "./src/components/obsNotesMuncher/muncher/index.js",
             ),
             name: "pankosmiaRcl",
-            fileName: (format) => `obs-articles-muncher-rcl.${format}.js`,
+            fileName: (format) => `obs-notes-muncher-rcl.${format}.js`,
           },
         }
       : {
@@ -59,6 +59,6 @@ export default defineConfig(({ mode }) => {
           emptyOutDir: true,
           sourcemap: true,
         },
-    base: "/clients/core-contenthandler_obs_articles/",
+    base: "/clients/core-contenthandler_obs_notes/",
   };
 });
