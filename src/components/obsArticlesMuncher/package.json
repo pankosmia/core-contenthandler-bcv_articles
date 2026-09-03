@@ -1,8 +1,13 @@
 {
   "name": "pankosmia-obs_articles-muncher",
   "version": "0.0.1",
-  "private": true,
-  "homepage": "/clients/core-contenthandler_obs_articles",
+  "private": false,
+  "homepage": "https://github.com/pankosmia/core-contenthandler_obs_articles",
+  "main": "munchersPackageExport/obs-articles-muncher-rcl.umd.js",
+  "module": "munchersPackageExport/obs-articles-muncher-rcl.es.js",
+  "files": [
+    "munchersPackageExport"
+  ],
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
