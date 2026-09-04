@@ -7,24 +7,6 @@
     "net": false,
     "debug": true
   },
-  "endpoints": {
-    "textStories": {
-      "create_document": [
-        {
-          "doc": "Create a document for OBS",
-          "label": "pages:core-contenthandler_obs_notes:create_content_obs",
-          "url": "/createDocument/obsContent"
-        }
-      ],
-      "about_repo": [
-        {
-          "doc": "About repo translationNotes document",
-          "label": "pages:content:about_repo",
-          "url": "/aboutRepo?repoPath=%%REPO_PATH%%"
-        }
-      ]
-    }
-  },
 
   "i18n": {
     "title": {
