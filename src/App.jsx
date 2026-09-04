@@ -27,17 +27,11 @@ function App() {
       <Grid size={12}>
         <h1>
           {doI18n(
-            "pages:core-contenthandler_obs_notes:stub_content",
+            "pages:core-contenthandler_bcv_articles:stub_content",
             i18nRef.current,
           )}
         </h1>
       </Grid>
-      <Chip
-        label="bouton create"
-        color="secondary"
-        variant="outlined"
-        onClick={() => navigate("obsContent")}
-      />
     </Grid>
   );
 }

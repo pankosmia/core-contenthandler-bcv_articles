@@ -9,7 +9,6 @@ import { createTheme, styled } from "@mui/material";
 import { getAndSetJson } from "pithekos-lib";
 import { useEffect, useState } from "react";
 import { MuncherTest } from "./pages/MuncherTest";
-import OBSContext from "../src/components/obsNotesMuncher/muncher/context/obsContext";
 const router = createHashRouter([
   {
     path: "/",
@@ -21,7 +20,6 @@ const router = createHashRouter([
   },
 ]);
 function AppLayout() {
-  const [obs, setObs] = useState([1, 0]);
   const [themeSpec, setThemeSpec] = useState({
     palette: {
       primary: {
@@ -69,22 +67,20 @@ function AppLayout() {
   }));
 
   return (
-    <OBSContext.Provider value={{ obs, setObs }}>
-      <ThemeProvider theme={theme}>
-        <SnackbarProvider
-          Components={{
-            error: CustomSnackbarContent,
-            info: CustomSnackbarContent,
-            warning: CustomSnackbarContent,
-            success: CustomSnackbarContent,
-          }}
-          maxSnack={6}
-        />
-        <SpaContainer>
-          <RouterProvider router={router} />
-        </SpaContainer>
-      </ThemeProvider>
-    </OBSContext.Provider>
+    <ThemeProvider theme={theme}>
+      <SnackbarProvider
+        Components={{
+          error: CustomSnackbarContent,
+          info: CustomSnackbarContent,
+          warning: CustomSnackbarContent,
+          success: CustomSnackbarContent,
+        }}
+        maxSnack={6}
+      />
+      <SpaContainer>
+        <RouterProvider router={router} />
+      </SpaContainer>
+    </ThemeProvider>
   );
 }
 createRoot(document.getElementById("root")).render(<AppLayout />);

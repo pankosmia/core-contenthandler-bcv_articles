@@ -4,23 +4,25 @@ import {
   bcvContext,
   debugContext,
   i18nContext,
+  wordContext,
+  netContext,
 } from "pankosmia-rcl";
 import { useContext, useState, useEffect } from "react";
 import { getJson } from "pankosmia-lib/http";
-import { WrapperNav } from "../components/obsNotesMuncher/wrapperMuncher/WrapperNav";
+import { WrapperNav } from "../components/bcvArticlesMuncher/wrapperMuncher/WrapperNav";
 import { Padding } from "@mui/icons-material";
-import OBSContext from "../components/obsNotesMuncher/muncher/context/obsContext";
-import OBSNotesViewerMuncher from "../components/obsNotesMuncher/muncher/Viewer/OBSNotesViewerMuncher";
+import BcvArticlesViewerMuncher from "../components/bcvArticlesMuncher/muncher/Viewer/BcvArticlesViewerMuncher";
 
 export function MuncherTest() {
-  const { obs, setObs } = useContext(OBSContext);
   const { bcvRef } = useContext(bcvContext);
   const { currentProjectRef } = useContext(currentProjectContext);
   const { debugRef } = useContext(debugContext);
   const { i18nRef } = useContext(i18nContext);
   const [currentBurrito, setCurrentBurrito] = useState(null);
   const [modified, setModified] = useState(false);
-
+  const { word } = useContext(wordContext);
+  const { enabledRef } = useContext(netContext);
+  const { systemBcv } = useContext(bcvContext);
   useEffect(() => {
     async function getSummary() {
       if (currentProjectRef.current) {
@@ -33,7 +35,7 @@ export function MuncherTest() {
           setCurrentBurrito([projectPath, entry]);
         } else {
           enqueueSnackbar(
-            `${doI18n("pages:core-contenthandler_juxta:error", i18nRef.current)}: ${fullMetadataResponse.status}`,
+            `${doI18n("pages:core-contenthandler_bcv_articles:error", i18nRef.current)}: ${fullMetadataResponse.status}`,
             { variant: "error" },
           );
         }
@@ -57,7 +59,7 @@ export function MuncherTest() {
         height: "98vh",
       }}
     >
-      <WrapperNav flavor={"x-obsnotes"} obs={obs} setObs={setObs} />
+      <WrapperNav flavor={"x-bcvarticles"} />
 
       <Box
         sx={{
@@ -69,10 +71,13 @@ export function MuncherTest() {
       >
         {metadata && (
           <Box sx={{ flex: 1, margin: 2 }}>
-            <OBSNotesViewerMuncher
+            <BcvArticlesViewerMuncher
               metadata={metadata}
               debugRef={debugRef}
-              obs={obs}
+              i18nRef={i18nRef}
+              word={word}
+              enabledRef={enabledRef}
+              systemBcv={systemBcv}
             />
           </Box>
         )}

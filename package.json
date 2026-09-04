@@ -1,13 +1,14 @@
 {
-  "name": "core-contenthandler_obs_notes",
+  "name": "core-contenthandler_bcv_articles",
   "version": "0.0.1",
   "private": true,
-  "homepage": "/clients/core-contenthandler_obs_notes",
+  "homepage": "/clients/core-contenthandler_bcv_articles",
   "dependencies": {
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@mui/icons-material": "^9.4.0",
     "@mui/material": "^9.3.1",
+    "font-detect-rhl": "^1.1.10",
     "interactjs": "^1.10.28",
     "md5": "^2.3.0",
     "notistack": "^3.0.2",
@@ -17,7 +18,8 @@
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-markdown": "^10.1.0",
-    "react-router-dom": "^7.18.1"
+    "react-router-dom": "^7.18.1",
+    "snowball-stemmer.jsx": "^0.2.3"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
@@ -27,12 +29,12 @@
   },
   "peerDependencies": {
     "notistack": "^3.0.2",
+    "pankosmia-rcl": "^0.7.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "pankosmia-rcl": "^0.7.1"
+    "react-dom": "^19.0.0"
   },
   "scripts": {
-    "publish": "pnpm run build:package  && cd ./src/components/obsNotesMuncher && npm publish",
+    "publish": "pnpm run build:package  && cd ./src/components/bcvArticlesMuncher && npm publish",
     "build": "vite build",
     "build:package": "vite build --mode isMuncher",
     "dev": "vite",

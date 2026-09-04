@@ -87,6 +87,6 @@ export function getFirstChapter(flavor) {
     case "x-juxtalinear":
       return getFirstChapterJuxta;
     default:
-      return getFirstChapterTextTranslation;
+      return getFirstChapterBCVNotes;
   }
 }

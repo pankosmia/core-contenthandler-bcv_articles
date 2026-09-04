@@ -1,5 +1,5 @@
 {
-  "id": "core-contenthandler_obs_notes",
+  "id": "core-contenthandler_bcv_articles",
   "exclude_from_menu": true,
   "exclude_from_dashboard": true,
   "minServerVersion": "0.12.14",
@@ -10,52 +10,15 @@
 
   "i18n": {
     "title": {
-      "en": "core-contenthandler_obs_notes"
+      "en": "core-contenthandler_bcv_articles"
     },
     "summary": {
-      "en": "core-contenthandler_obs_notes"
+      "en": "core-contenthandler_bcv_articles"
     },
     "stub_content": {
       "en": "Content goes here"
     },
-    "new_obs_content": {
-      "en": "Create Open Bible Stories",
-      "fr": "Créer Open Bible Stories"
-    },
-    "name_is_taken": {
-      "en": "The name is already taken",
-      "fr": "Ce nom est déjà pris",
-      "es": "El nombre ya está en uso"
-    },
-    "create_content_obs": {
-      "en": "Open Bible Stories ",
-      "fr": "Open Bible Stories",
-      "id": "@Sumber Daya CAT"
-    },
-    "name": {
-      "en": "Document name",
-      "es": "Nombre del documento",
-      "fr": "Nom du document",
-      "id": "@Nama"
-    },
-    "abbreviation": {
-      "en": "Abbreviation",
-      "es": "Abreviación",
-      "fr": "Abréviation",
-      "id": "Singkatan"
-    },
-    "type": {
-      "en": "Type",
-      "es": "Tipo",
-      "fr": "Type",
-      "id": "Jenis"
-    },
-    "lang_code": {
-      "en": "Language Code ('und' for undetermined)",
-      "es": "Código del Idioma (si no está determinado, use 'und')",
-      "fr": "Code Langue (si non déterminé, utilisez 'und')",
-      "id": "Kode Bahasa ('und' buat yg tak dpt ditentukan)"
-    },
+
     "close": {
       "en": "Close",
       "es": "Cerrar",
@@ -68,24 +31,9 @@
       "fr": "Créer",
       "id": "Buat"
     },
-    "required_field": {
-      "en": "* Required fields",
-      "fr": "* Champs obligatoires",
-      "id": "* Data yg diperlukan",
-      "es": "* Campos requeridos"
-    },
-    "book_creation_error": {
-      "en": "The book could not be created",
-      "fr": "Le livre n'a pas pu être créé",
-      "id": "@Kesalahan terjadi: Buku tidak jadi terbuat"
-    },
-    "helper_abbreviation": {
-      "en": "Unique short label to identify your document (2-8 characters, no \" \", no \"_\"at beginning at the end)",
-      "fr": "Combinaison unique de caractères pour identifier un document (2-8 caractères, pas de \" \", pas de \"_\" à la fin)"
-    },
-    "error_data": {
-      "en": "Error fetching data",
-      "fr": "Erreur lors de la récupération des données"
+    "error": {
+      "en": "Error",
+      "fr": "Un erreur est survenue"
     }
   }
 }

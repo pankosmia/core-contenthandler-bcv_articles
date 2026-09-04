@@ -1,10 +1,10 @@
 {
-  "name": "pankosmia-obs_notes-muncher",
+  "name": "pankosmia-bcv_articles-muncher",
   "version": "0.0.1",
   "private": false,
-  "homepage": "https://github.com/pankosmia/core-contenthandler_obs_notes",
-  "main": "munchersPackageExport/obs-notes-muncher-rcl.umd.js",
-  "module": "munchersPackageExport/obs-notes-muncher-rcl.es.js",
+  "homepage": "https://github.com/pankosmia/core-contenthandler_bcv_articles",
+  "main": "munchersPackageExport/bcv-articles-muncher-rcl.umd.js",
+  "module": "munchersPackageExport/bcv-articles-muncher-rcl.es.js",
   "files": [
     "munchersPackageExport"
   ],
