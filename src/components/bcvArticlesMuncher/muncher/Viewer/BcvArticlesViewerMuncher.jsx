@@ -215,15 +215,17 @@ function BcvArticlesViewerMuncher({
                   </AccordionSummary>
                   <AccordionDetails>
                     {ingredient && (
-                      <Markdown className="markdown">
-                        {enabledRef.current
-                          ? v
-                          : v.replace(
-                              /\[([^\]]+)\]\([^\)]+\)/g,
-                              (match, p1) =>
-                                `${p1} ${doI18n("pages:core-local-workspace:link_disabled_offline", i18nRef.current)}`,
-                            )}
-                      </Markdown>
+                      <div className="markdown">
+                        <Markdown>
+                          {enabledRef.current
+                            ? v
+                            : v.replace(
+                                /\[([^\]]+)\]\([^\)]+\)/g,
+                                (match, p1) =>
+                                  `${p1} ${doI18n("pages:core-local-workspace:link_disabled_offline", i18nRef.current)}`,
+                              )}
+                        </Markdown>
+                      </div>
                     )}
                   </AccordionDetails>
                 </Accordion>
