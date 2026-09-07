@@ -1,6 +1,6 @@
 {
   "name": "pankosmia-bcv_articles-muncher",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": false,
   "homepage": "https://github.com/pankosmia/core-contenthandler_bcv_articles",
   "main": "munchersPackageExport/bcv-articles-muncher-rcl.umd.js",

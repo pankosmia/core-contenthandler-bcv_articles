@@ -1,6 +1,6 @@
 {
   "name": "core-contenthandler_bcv_articles",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "homepage": "/clients/core-contenthandler_bcv_articles",
   "dependencies": {
