@@ -9,8 +9,6 @@
     "@mui/icons-material": "^9.4.0",
     "@mui/material": "^9.3.1",
     "font-detect-rhl": "^1.1.10",
-    "interactjs": "^1.10.28",
-    "md5": "^2.3.0",
     "notistack": "^3.0.2",
     "pankosmia-lib": "^0.0.3",
     "pankosmia-rcl": "0.7.1",
