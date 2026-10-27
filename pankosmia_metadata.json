@@ -18,7 +18,9 @@
     "stub_content": {
       "en": "Content goes here"
     },
-
+    "titleMuncherTest": {
+      "en": "Flavor x-bcvarticles"
+    },
     "close": {
       "en": "Close",
       "es": "Cerrar",
