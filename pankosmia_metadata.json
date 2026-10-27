@@ -1,6 +1,6 @@
 {
   "id": "core-contenthandler-bcv_articles",
-  "exclude_from_menu": true,
+  "exclude_from_menu": false,
   "exclude_from_dashboard": true,
   "minServerVersion": "0.12.14",
   "require": {
