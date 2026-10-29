@@ -5,14 +5,14 @@
   "homepage": "/clients/core-contenthandler-bcv_articles",
   "dependencies": {
     "font-detect-rhl": "^1.1.10",
-    "pankosmia-lib": "^0.0.3",
-    "pithekos-lib": "^0.11.20",
+    "pankosmia-lib": "^0.0.5",
     "react-markdown": "^10.1.0",
     "snowball-stemmer.jsx": "^0.2.3"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
     "husky": "^9.1.7",
+    "pankosmia-rcl": "0.8.5",
     "prettier": "3.8.1",
     "vite": "^6.0.7"
   },
@@ -22,7 +22,7 @@
     "@mui/icons-material": "9.3.1",
     "@mui/material": "9.3.1",
     "notistack": "3.0.2",
-    "pankosmia-rcl": "0.8.0",
+    "pankosmia-rcl": "0.8.5",
     "react": "19.2.8",
     "react-dom": "19.2.8",
     "react-router-dom": "7.9.4"
