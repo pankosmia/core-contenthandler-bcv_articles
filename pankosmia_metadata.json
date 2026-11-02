@@ -7,7 +7,9 @@
     "net": false,
     "debug": true
   },
-
+  "endpoints": {
+    "x-bcvarticles": {}
+  },
   "i18n": {
     "title": {
       "en": "core-contenthandler-bcv_articles"
